@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P111 · Interactive · Nebulised therapies for smoke inhalation · BBA 2026</title>
+<meta name="description" content="Interactive companion to BBA 2026 Poster P111: explore the smoke inhalation injury evidence base — animated two-hit pathophysiology, sortable trials, adaptive platform schematic. Dr Ganesh Hanumanthu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../assets/interactive.css">
+<script src="../assets/chart.umd.js"></script>
+</head>
+<body class="theme-saffron">
+<div class="wrap poster-detail">
+
+  <header class="site-header">
+    <a href="../" class="brand">
+      BBA <span class="accent">2026</span>
+      <span class="brand-sub">Posters · Dr Ganesh Hanumanthu</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../">Home</a>
+      <a href="p111-smoke-inhalation.html">P111 · References</a>
+      <a href="p117-interactive.html">P117 · Interactive</a>
+      <a href="mailto:Ganesh.Hanumanthu@merseywestlancs.nhs.uk">Contact</a>
+    </nav>
+  </header>
+
+  <a href="p111-smoke-inhalation.html" class="back-link">← References &amp; PDF download</a>
+
+  <div class="eyebrow">Poster P111 · Interactive companion</div>
+  <h1 class="hero-title">Nebulised therapies for smoke inhalation injury: mechanistic rationale, evidence gaps, and the <em>case for an adaptive platform trial</em></h1>
+
+  <div class="interactive-bar">
+    <div>
+      <div class="ib-label">Interactive · Option A</div>
+      <div class="ib-headline">Explore the two-hit pathophysiology, sort 27 years of evidence, and walk through the adaptive platform schematic.</div>
+    </div>
+    <a href="../files/P111.pdf" class="ib-pdf" download>↓ Printed poster (PDF)</a>
+  </div>
+
+  <p style="margin:24px 0;">Smoke inhalation injury is the <strong>single largest preventable driver of burn mortality</strong> — yet despite widespread use of nebulised unfractionated heparin, N-acetylcysteine, and β-agonists in specialist burn centres, the underpinning evidence remains <strong>fragmented, underpowered, and inconclusive</strong>.</p>
+
+  <!-- ============================================================
+       AT A GLANCE — 4 headline numbers
+       ============================================================ -->
+  <div class="iap">
+    <div class="iap-header">
+      <div class="iap-title">Scale of the problem</div>
+      <div class="iap-hint">Tap a tile for the underlying detail</div>
+    </div>
+    <div class="stat-grid" id="stat-grid-p111">
+      <div class="stat-tile">
+        <div class="figure">35<span class="unit">%</span></div>
+        <div class="label">Burn admissions with inhalation injury</div>
+        <div class="stat-detail">Approximate proportion of burn-centre admissions with concomitant inhalation injury, established in the landmark Shirani 1987 cohort and broadly consistent in subsequent series.</div>
+      </div>
+      <div class="stat-tile">
+        <div class="figure">38<span class="unit">%</span></div>
+        <div class="label">Subsequent pneumonia rate</div>
+        <div class="stat-detail">Pneumonia is the most frequent secondary complication of inhalation injury, occurring in approximately 38% of affected patients — a direct downstream consequence of the second-hit fibrin-cast obstruction and impaired mucociliary clearance.</div>
+      </div>
+      <div class="stat-tile">
+        <div class="figure">+20<span class="unit">%</span></div>
+        <div class="label">Absolute mortality increase</div>
+        <div class="stat-detail">Inhalation injury increases burn mortality by approximately 20 percentage points in absolute terms, making it the single largest preventable contributor to burn death in modern series.</div>
+      </div>
+      <div class="stat-tile">
+        <div class="figure small">ZERO</div>
+        <div class="label">Therapies of proven survival benefit</div>
+        <div class="stat-detail">Despite 27 years of investigation, no nebulised therapy for smoke inhalation injury has demonstrated definitive survival benefit in adequately powered multicentre randomised trials. The HEPBURN trial — the closest such attempt — terminated at n=13.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       TWO-HIT PATHOPHYSIOLOGY — animated time sequence
+       ============================================================ -->
+  <div class="iap">
+    <div class="iap-header">
+      <div class="iap-title">A distinct <em style="font-style:italic; color:var(--saffron-deep);">two-hit</em> injury cascade</div>
+      <div class="iap-hint">Animated · play to step through · 0 → 72 hours</div>
+    </div>
+    <div class="mech-stage" id="mech-stage-p111">
+      <div class="mech-controls">
+        <button class="mech-play">▶ Play</button>
+        <span class="mech-step">Press Play</span>
+      </div>
+      <svg class="mech-svg" viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrowhead-111-ember" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#a8451f"/>
+          </marker>
+          <marker id="arrowhead-111-amber" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#c8893a"/>
+          </marker>
+        </defs>
+
+        <!-- T = 0 -->
+        <g class="node" data-step="1">
+          <rect x="270" y="14" width="180" height="44" rx="3" fill="#fff" stroke="#1c2350" stroke-width="2"/>
+          <text x="360" y="32" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="2" fill="#1c2350" font-weight="700">T = 0</text>
+          <text x="360" y="48" text-anchor="middle" font-family="Fraunces" font-size="13" font-weight="600" fill="#1c2350">Smoke exposure</text>
+        </g>
+
+        <line class="arrow" data-step="2" x1="360" y1="62" x2="360" y2="92" stroke="#a8451f" stroke-width="2" marker-end="url(#arrowhead-111-ember)"/>
+
+        <!-- HOUR 0-6: First hit -->
+        <g class="node" data-step="2">
+          <rect x="170" y="96" width="380" height="86" rx="3" fill="rgba(168,69,31,0.10)" stroke="#a8451f" stroke-width="1.5"/>
+          <text x="360" y="116" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="2" fill="#a8451f" font-weight="700">HOUR 0–6 · FIRST HIT</text>
+          <text x="360" y="134" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="16" font-weight="600" fill="#a8451f">Chemical ciliotoxicity</text>
+          <text x="360" y="153" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" fill="#1c2350">Direct chemical injury · Ciliary destruction · Denudation</text>
+          <text x="360" y="170" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" fill="#1c2350">↓ Mucociliary clearance · Neutrophil influx · Cytokine storm</text>
+        </g>
+
+        <line class="arrow" data-step="3" x1="360" y1="186" x2="360" y2="216" stroke="#c8893a" stroke-width="2" marker-end="url(#arrowhead-111-amber)"/>
+
+        <!-- HOUR 12-72: Second hit -->
+        <g class="node" data-step="3">
+          <rect x="170" y="220" width="380" height="86" rx="3" fill="rgba(200,137,58,0.12)" stroke="#c8893a" stroke-width="1.5"/>
+          <text x="360" y="240" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="2" fill="#8f5e1d" font-weight="700">HOUR 12–72 · SECOND HIT</text>
+          <text x="360" y="258" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="16" font-weight="600" fill="#8f5e1d">Fibrin-cast obstruction</text>
+          <text x="360" y="277" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" fill="#1c2350">Bronchial blood flow ↑ 10-fold · Plasma exudation</text>
+          <text x="360" y="294" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" fill="#1c2350">Fibrin + debris casts · Small-airway obstruction · V/Q mismatch</text>
+        </g>
+
+        <line class="arrow" data-step="4" x1="360" y1="310" x2="360" y2="338" stroke="#1c2350" stroke-width="2" marker-end="url(#arrowhead-111-ember)"/>
+
+        <!-- DAY 3+: Outcome -->
+        <g class="node" data-step="4">
+          <rect x="220" y="342" width="280" height="32" rx="3" fill="rgba(28,35,80,0.10)" stroke="#1c2350" stroke-width="1.5"/>
+          <text x="360" y="357" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="2" fill="#1c2350" font-weight="700">DAY 3+</text>
+          <text x="360" y="369" text-anchor="middle" font-family="IBM Plex Sans" font-size="11" fill="#1c2350">Pneumonia · ARDS · death</text>
+        </g>
+      </svg>
+    </div>
+    <div style="margin-top:18px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px;">
+      <div style="background:#fff; border:1px solid rgba(28,35,80,0.15); border-radius:3px; padding:14px;">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:4px;">Targets first hit</div>
+        <div style="font-family:'Fraunces', serif; font-weight:600; font-size:16px; margin-bottom:4px;">N-Acetylcysteine</div>
+        <div style="font-size:12.5px; color:var(--indigo-soft); line-height:1.45;">Mucolytic + antioxidant; addresses oxidative epithelial injury and mucus viscosity in the first 6 hours.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(28,35,80,0.15); border-radius:3px; padding:14px;">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:4px;">Targets second hit</div>
+        <div style="font-family:'Fraunces', serif; font-weight:600; font-size:16px; margin-bottom:4px;">Nebulised heparin</div>
+        <div style="font-size:12.5px; color:var(--indigo-soft); line-height:1.45;">Attenuates fibrin-cast formation and pulmonary coagulopathy; the 12–72-hour airway-cast pathology.</div>
+      </div>
+      <div style="background:#fff; border:1px solid rgba(28,35,80,0.15); border-radius:3px; padding:14px;">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:4px;">Supports clearance</div>
+        <div style="font-family:'Fraunces', serif; font-weight:600; font-size:16px; margin-bottom:4px;">β-agonists</div>
+        <div style="font-size:12.5px; color:var(--indigo-soft); line-height:1.45;">Bronchodilation + mucociliary clearance; works across both phases by improving residual cilia function and airway calibre.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CLINICAL EVIDENCE TABLE
+       ============================================================ -->
+  <div class="iap">
+    <div class="iap-header">
+      <div class="iap-title">A 27-year evidence base</div>
+      <div class="iap-hint">Sort columns · filter pills · tap row for detail</div>
+    </div>
+    <div id="studies-p111"></div>
+  </div>
+
+  <!-- ============================================================
+       WHY RCTs FAIL — 4 barrier cards
+       ============================================================ -->
+  <div class="iap">
+    <div class="iap-header">
+      <div class="iap-title">Why conventional RCTs fail here</div>
+      <div class="iap-hint">Four structural barriers · together, fatal · tap any barrier</div>
+    </div>
+    <div class="barrier-grid" id="barrier-grid-p111">
+      <div class="barrier">
+        <div class="badge">Barrier 01</div>
+        <div class="title">Low incidence</div>
+        <div class="summary">~5,000 UK cases/year across ~25 specialist centres.</div>
+        <div class="detail">Each centre sees a small annual volume; recruiting an adequately powered trial requires multicentre coordination across the entire UK burn-care network. Compounding this, only a subset of admitted inhalation-injury patients meet eligibility criteria for any given intervention trial.</div>
+      </div>
+      <div class="barrier">
+        <div class="badge">Barrier 02</div>
+        <div class="title">Heterogeneity</div>
+        <div class="summary">Severity, TBSA, timing of injury, co-morbidities.</div>
+        <div class="detail">Inhalation injury severity ranges from mild bronchial irritation to ARDS-grade lung injury; TBSA varies; smoke composition differs by exposure context (housefire, industrial, combustion source). Standardising entry criteria sharply narrows the eligible pool, but loosening them dilutes any treatment effect.</div>
+      </div>
+      <div class="barrier">
+        <div class="badge">Barrier 03</div>
+        <div class="title">High acuity</div>
+        <div class="summary">Consent + randomisation needed within hours of arrival.</div>
+        <div class="detail">Both first-hit and second-hit pathology are time-sensitive. The therapeutic window for first-hit-targeting interventions (e.g., NAC) is 0–6 hours; for second-hit-targeting (heparin), it extends to 24–72 hours. Patients present unconscious or intubated; consent procedures designed for elective trials fail. Many sites lack 24/7 research staff cover.</div>
+      </div>
+      <div class="barrier">
+        <div class="badge">Barrier 04</div>
+        <div class="title">Confounded co-intervention</div>
+        <div class="summary">Heparin is almost always given alongside NAC, salbutamol, and bronchoscopic lavage.</div>
+        <div class="detail">Specialist centres deploy bundled nebulised therapy as standard practice. Single-agent trials therefore study the agent against background polypharmacy, not against no intervention; isolating the contribution of any single agent is methodologically very difficult.</div>
+      </div>
+    </div>
+    <div style="margin-top:18px; padding:14px 18px; background:rgba(168,69,31,0.08); border-left:3px solid var(--sienna); border-radius:3px;">
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:var(--sienna-deep); font-weight:700; margin-bottom:4px;">Empirical proof</div>
+      <div style="font-size:14px; line-height:1.5; color:var(--indigo);">
+        <strong>HEPBURN</strong> — the only completed international RCT of nebulised heparin for inhalation injury — was powered for 116 patients across multiple specialist burn centres in two countries. <strong>It terminated at n=13.</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ADAPTIVE PLATFORM SCHEMATIC
+       ============================================================ -->
+  <div class="iap">
+    <div class="iap-header">
+      <div class="iap-title">The adaptive platform solution</div>
+      <div class="iap-hint">A single, perpetual trial — answering many questions at once</div>
+    </div>
+    <p style="margin-bottom:18px;">A master protocol with multiple intervention domains. Patients are consented <em>once</em> into the platform; Bayesian adaptive randomisation directs them across domains and updates allocations as evidence accrues. Futile arms are dropped; promising arms gain more patients; new agents can be added without restarting the trial.</p>
+
+    <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+      <!-- Top: 4 domain branches -->
+      <g>
+        <rect x="90" y="20" width="120" height="48" rx="3" fill="rgba(62,106,114,0.15)" stroke="#3e6a72" stroke-width="1.5"/>
+        <text x="150" y="38" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5" fill="#2a4e54" font-weight="700">DOMAIN 1</text>
+        <text x="150" y="56" text-anchor="middle" font-family="Fraunces" font-size="14" font-weight="600" fill="#1c2350">Heparin</text>
+        <line x1="150" y1="68" x2="150" y2="108" stroke="#3e6a72" stroke-width="1.5"/>
+        <circle cx="150" cy="110" r="6" fill="#3e6a72"/>
+      </g>
+      <g>
+        <rect x="240" y="20" width="120" height="48" rx="3" fill="rgba(62,106,114,0.15)" stroke="#3e6a72" stroke-width="1.5"/>
+        <text x="300" y="38" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5" fill="#2a4e54" font-weight="700">DOMAIN 2</text>
+        <text x="300" y="56" text-anchor="middle" font-family="Fraunces" font-size="14" font-weight="600" fill="#1c2350">NAC</text>
+        <line x1="300" y1="68" x2="300" y2="108" stroke="#3e6a72" stroke-width="1.5"/>
+        <circle cx="300" cy="110" r="6" fill="#3e6a72"/>
+      </g>
+      <g>
+        <rect x="390" y="20" width="120" height="48" rx="3" fill="rgba(62,106,114,0.15)" stroke="#3e6a72" stroke-width="1.5"/>
+        <text x="450" y="38" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5" fill="#2a4e54" font-weight="700">DOMAIN 3</text>
+        <text x="450" y="56" text-anchor="middle" font-family="Fraunces" font-size="14" font-weight="600" fill="#1c2350">β-agonist</text>
+        <line x1="450" y1="68" x2="450" y2="108" stroke="#3e6a72" stroke-width="1.5"/>
+        <circle cx="450" cy="110" r="6" fill="#3e6a72"/>
+      </g>
+      <g>
+        <rect x="540" y="20" width="120" height="48" rx="3" fill="none" stroke="#3e6a72" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="600" y="38" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5" fill="#2a4e54" font-weight="700">DOMAIN 4+</text>
+        <text x="600" y="56" text-anchor="middle" font-family="Fraunces" font-style="italic" font-size="13" fill="#3d4475">future agents</text>
+        <line x1="600" y1="68" x2="600" y2="108" stroke="#3e6a72" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
+        <circle cx="600" cy="110" r="6" fill="none" stroke="#3e6a72" stroke-width="1.5" stroke-dasharray="2 2"/>
+      </g>
+
+      <!-- Spine -->
+      <line x1="40" y1="110" x2="680" y2="110" stroke="#3e6a72" stroke-width="3"/>
+      <text x="40" y="100" font-family="IBM Plex Mono" font-size="9" fill="#2a4e54" letter-spacing="1.5" font-weight="700">PLATFORM SPINE · CONTINUOUS ENROLMENT</text>
+
+      <!-- Bayesian adaptation section -->
+      <text x="360" y="140" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8893a" letter-spacing="2" font-weight="700">BAYESIAN ADAPTATION</text>
+      <line x1="90" y1="152" x2="630" y2="152" stroke="#c8893a" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5"/>
+      <g font-family="IBM Plex Sans" font-size="11">
+        <text x="100" y="172" text-anchor="middle" fill="#1c2350">Drop futile</text>
+        <text x="100" y="186" text-anchor="middle" fill="#3d4475">arms</text>
+        <text x="270" y="172" text-anchor="middle" fill="#1c2350">Up-randomise</text>
+        <text x="270" y="186" text-anchor="middle" fill="#3d4475">to winning</text>
+        <text x="450" y="172" text-anchor="middle" fill="#1c2350">Add new</text>
+        <text x="450" y="186" text-anchor="middle" fill="#3d4475">agents</text>
+        <text x="620" y="172" text-anchor="middle" fill="#1c2350">Subgroup</text>
+        <text x="620" y="186" text-anchor="middle" fill="#3d4475">learning</text>
+      </g>
+    </svg>
+
+    <p style="margin-top:18px; font-size:14px; color:var(--indigo-soft); line-height:1.55;">
+      <strong>REMAP-CAP as proof of concept:</strong> the adaptive platform design enrolled 13,000+ patients globally during COVID-19, generating multiple practice-changing answers in parallel. The UK burn-care network — concentrated, well-coordinated, and clinically connected — is uniquely placed to apply the same approach to inhalation injury.
+    </p>
+  </div>
+
+  <!-- ============================================================
+       THE PROPOSAL
+       ============================================================ -->
+  <div class="iap" style="background:linear-gradient(135deg, rgba(200,137,58,0.15), rgba(168,69,31,0.06)); border:1px solid var(--saffron);">
+    <div class="iap-header">
+      <div class="iap-title"><em style="color:var(--saffron-deep); font-style:italic;">A UK-led adaptive platform trial</em></div>
+      <div class="iap-hint">Embedded across the BBA-affiliated specialist burn-centre network</div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin-top:6px;">
+      <div>
+        <h4 style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:6px;">Platform design</h4>
+        <p style="font-size:13.5px; line-height:1.55;">Master protocol; three initial domains (heparin, NAC, β-agonist); Bayesian adaptive randomisation; pre-specified futility / efficacy stopping rules.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:6px;">Primary outcome</h4>
+        <p style="font-size:13.5px; line-height:1.55;">28-day ventilator-free days (compatible with HEPBURN and Hakim 2025); pneumonia, mortality, ICU length-of-stay as secondary.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:6px;">Feasibility advantage</h4>
+        <p style="font-size:13.5px; line-height:1.55;">One consent, one infrastructure, one statistical core. Smaller per-domain samples; perpetual recruitment overcomes the HEPBURN failure mode.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CONCLUSION
+       ============================================================ -->
+  <h2 class="section-title"><span class="num">09</span>From mechanism to method.</h2>
+  <blockquote style="border-left:3px solid var(--saffron); padding:6px 0 6px 18px; margin:18px 0; font-family:'Fraunces', serif; font-style:italic; font-size:18px; line-height:1.55; color:var(--indigo);">
+    Traditional RCTs have not resolved — and arguably <strong style="font-weight:700; color:var(--saffron-deep);">cannot resolve</strong> — uncertainty in the management of smoke inhalation injury. Bayesian adaptive platform trials offer a pragmatic, ethically robust pathway to definitive, practice-changing evidence.
+  </blockquote>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin:24px 0;">
+    <div>
+      <h4 style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:6px;">For the clinician</h4>
+      <p style="font-size:13.5px; line-height:1.55;">Heparin, NAC, and β-agonists remain reasonable adjuncts in specialist centres on mechanistic grounds — but practice should be acknowledged as evidence-light. Local protocols should support future platform-trial participation.</p>
+    </div>
+    <div>
+      <h4 style="font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--saffron-deep); font-weight:700; margin-bottom:6px;">For the BBA community</h4>
+      <p style="font-size:13.5px; line-height:1.55;">The UK burn-care network — concentrated, well-coordinated, and clinically connected — is uniquely placed to lead an international adaptive platform trial. This is the design that can finally close a 27-year evidence gap.</p>
+    </div>
+  </div>
+
+  <div style="margin:48px 0 24px; padding-top:24px; border-top:1px solid rgba(28,35,80,0.15); display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+    <a href="p111-smoke-inhalation.html" class="dl-btn primary">
+      <span class="icon">§</span> Full references &amp; PDF download
+    </a>
+    <a href="p117-interactive.html" style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--indigo-soft); text-decoration:none;">→ P117 · Lidocaine in burns</a>
+  </div>
+
+</div>
+
+<script src="../assets/interactive.js"></script>
+<script>
+const studiesP111 = [
+  {_id:1, study:'Desai', year:1998, ref:'J Burn Care Rehabil', design:'Retrospective cohort', n:90, setting:'Paediatric', isRCT:false, mortality:true, multicentre:false, recent:false, status:'positive', finding:'Heparin + NAC ↓ atelectasis, reintubation, mortality',
+    detailHtml: `<h4>Citation</h4><p>Desai MH, et al. <em>J Burn Care Rehabil.</em> 1998;19:210–2.</p><h4>Design</h4><p>Paediatric retrospective cohort. Compared nebulised heparin/NAC bundled regimen against historical controls.</p><h4>Key results</h4><p>Reduced atelectasis, reintubation rate, and mortality. The foundational paper that established the bundled-therapy paradigm in burn centres globally.</p>` },
+  {_id:2, study:'Enkhbaatar', year:2007, ref:'Crit Care Med', design:'Preclinical (ovine)', n:null, setting:'Burn + smoke model', isRCT:false, mortality:false, multicentre:false, recent:false, status:'positive', finding:'Aerosolised anticoagulants ↓ acute lung injury',
+    detailHtml: `<h4>Citation</h4><p>Enkhbaatar P, et al. <em>Crit Care Med.</em> 2007;35:2805–10.</p><h4>Design</h4><p>Ovine burn-plus-smoke model. Aerosolised anticoagulants tested against control.</p><h4>Key results</h4><p>Reduced acute lung injury markers. The mechanistic underpinning for clinical heparin trials in inhalation injury.</p>` },
+  {_id:3, study:'Miller', year:2009, ref:'J Burn Care Res', design:'Retrospective cohort', n:30, setting:'Adult', isRCT:false, mortality:true, multicentre:false, recent:false, status:'positive', finding:'Heparin/NAC ↑ LIS, oxygenation, survival',
+    detailHtml: `<h4>Citation</h4><p>Miller AC, et al. <em>J Burn Care Res.</em> 2009;30:249–56.</p><h4>Design</h4><p>Adult retrospective cohort, n=30, nebulised heparin/NAC vs standard care.</p><h4>Key results</h4><p>Improved lung injury scores, oxygenation, and survival. Translated the Desai paediatric finding to adult populations.</p>` },
+  {_id:4, study:'Elsharnouby', year:2014, ref:'J Crit Care', design:'Dose-comparison RCT', n:29, setting:'Adult', isRCT:true, mortality:false, multicentre:false, recent:false, status:'positive', finding:'10,000 IU vs 5,000 IU heparin: higher dose ↓ LIS & vent duration',
+    detailHtml: `<h4>Citation</h4><p>Elsharnouby NM, et al. <em>J Crit Care.</em> 2014;29:182.e1–4.</p><h4>Design</h4><p>RCT n=29, dose-comparison: 10,000 IU vs 5,000 IU nebulised heparin.</p><h4>Key results</h4><p>Higher dose associated with reduced lung injury scores and ventilator duration. Single-centre; underpowered for mortality.</p>` },
+  {_id:5, study:'Glas · HEPBURN', year:2014, refYear:2020, ref:'Trials / J Clin Med', design:'International RCT', n:13, setting:'Adult, multicentre', isRCT:true, mortality:true, multicentre:true, recent:false, status:'terminated', finding:'Powered for 116. Stopped at n=13.',
+    detailHtml: `<h4>Citation</h4><p>Glas GJ, et al. HEPBURN: efficacy and safety of nebulised heparin. <em>Trials.</em> 2014;15:91. Final report: <em>J Clin Med.</em> 2020;9:894.</p><h4>Design</h4><p>International, multicentre, randomised controlled trial of nebulised heparin in adult inhalation injury. Designed to enrol 116 patients; outcomes included ventilator-free days, pneumonia, and mortality.</p><h4>Critical finding</h4><p><strong>Terminated early at n=13</strong> due to inability to recruit. Direct empirical evidence that conventional two-arm RCTs cannot adequately study this disease. This single result is the strongest argument for an alternative trial design.</p>` },
+  {_id:6, study:'Glas IPD-MA', year:2016, ref:'Ann Intensive Care', design:'IPD meta-analysis', n:null, setting:'Ventilated ICU pooled', isRCT:false, mortality:true, multicentre:true, recent:false, status:'neutral', finding:'No convincing benefit on propensity-matched',
+    detailHtml: `<h4>Citation</h4><p>Glas GJ, et al. <em>Ann Intensive Care.</em> 2016;6:33.</p><h4>Design</h4><p>Individual patient data meta-analysis of ventilated ICU patients receiving nebulised heparin.</p><h4>Key results</h4><p>No convincing benefit on propensity-matched analysis. Methodologically rigorous; the most balanced existing pooled estimate.</p>` },
+  {_id:7, study:'McIntire', year:2017, ref:'J Burn Care Res', design:'Retrospective cohort', n:null, setting:'Adult', isRCT:false, mortality:true, multicentre:false, recent:false, status:'neutral', finding:'Larger cohort; signal blunted vs Desai / Miller',
+    detailHtml: `<h4>Citation</h4><p>McIntire AM, et al. <em>J Burn Care Res.</em> 2017;38:45–52.</p><h4>Design</h4><p>Larger adult retrospective cohort.</p><h4>Key results</h4><p>The mortality signal seen in Desai 1998 and Miller 2009 was attenuated. Suggests prior single-centre estimates may overstate effect size.</p>` },
+  {_id:8, study:'Lan', year:2020, ref:'Burns Trauma', design:'Meta-analysis (9 studies)', n:null, setting:'Adult, mostly retrospective', isRCT:false, mortality:true, multicentre:false, recent:true, status:'positive', finding:'Mortality ↓ (RR 0.75); VFD ↑',
+    detailHtml: `<h4>Citation</h4><p>Lan X, et al. <em>Burns Trauma.</em> 2020;8:tkaa015.</p><h4>Design</h4><p>Meta-analysis of 9 studies (no multicentre RCT in pool).</p><h4>Key results</h4><p>Pooled mortality RR 0.75; increased ventilator-free days. Limited by absence of large RCTs.</p>` },
+  {_id:9, study:'Palmieri', year:2006, ref:'Crit Care Med', design:'Preclinical (ovine)', n:null, setting:'Burn + smoke model', isRCT:false, mortality:false, multicentre:false, recent:false, status:'positive', finding:'Continuous nebulised albuterol ↑ oxygenation, ↓ lung water',
+    detailHtml: `<h4>Citation</h4><p>Palmieri TL, et al. <em>Crit Care Med.</em> 2006;34:1719–24.</p><h4>Design</h4><p>Ovine burn+smoke model; continuous nebulised albuterol vs control.</p><h4>Key results</h4><p>Improved oxygenation, reduced lung water. Mechanistic support for β-agonist component of bundled therapy.</p>` },
+  {_id:10, study:'Hakim', year:2025, ref:'Burns', design:'RCT', n:88, setting:'Adult, single centre', isRCT:true, mortality:true, multicentre:false, recent:true, status:'positive', finding:'↑ VFDs, ↑ PaO₂/FiO₂; no mortality difference',
+    detailHtml: `<h4>Citation</h4><p>Hakim SM, et al. <em>Burns.</em> 2025;51:107518.</p><h4>Design</h4><p>RCT, n=88, single centre, nebulised heparin vs control.</p><h4>Key results</h4><p>Improved ventilator-free days and PaO₂/FiO₂ ratio. No mortality difference. The most recent and largest single-centre RCT; demonstrates that with adequate single-centre infrastructure recruitment is feasible — but a single centre still cannot deliver definitive multicentre evidence.</p>` },
+];
+
+InteractivePoster.studiesTable(document.getElementById('studies-p111'), studiesP111, {
+  filters: [
+    { key:'rct',         label:'RCTs only',           test: r => r.isRCT },
+    { key:'multi',       label:'Multicentre',         test: r => r.multicentre },
+    { key:'mortality',   label:'Mortality endpoint',  test: r => r.mortality },
+    { key:'recent',      label:'Recent (≥2020)',      test: r => r.recent },
+  ],
+  columns: [
+    { key:'study', label:'Study', cellClass:'study-name',
+      render: r => `${r.study} <span class="year">${r.year}${r.refYear?'→'+r.refYear:''}</span>` },
+    { key:'design', label:'Design', style:'width:18%' },
+    { key:'n', label:'n', style:'width:8%',
+      render: r => r.n != null ? r.n : '—' },
+    { key:'setting', label:'Setting' },
+    { key:'finding', label:'Finding' },
+    { key:'status', label:'Status', style:'width:14%',
+      render: r => {
+        if (r.status === 'positive') return `<span class="tag-pill pos">${r.finding.includes('mort')?'↓ mort':'Signal'}</span>`;
+        if (r.status === 'terminated') return `<span class="tag-pill term">Terminated</span>`;
+        return `<span class="tag-pill neu">Equivocal</span>`;
+      } },
+  ],
+});
+
+InteractivePoster.statTiles(document.getElementById('stat-grid-p111'));
+InteractivePoster.barriers(document.getElementById('barrier-grid-p111'));
+InteractivePoster.mechAnim(document.getElementById('mech-stage-p111'), 4);
+</script>
+
+<!-- ============================================================
+     Q&A WIDGET — Option B (Anthropic-powered evidence assistant)
+     ============================================================ -->
+<script>
+  window.BBA_QA_CONFIG = {
+    workerUrl: 'https://bba-2026-qa.gh-b03.workers.dev',
+    posterId: 'p111',
+    suggestions: [
+      'Why did the HEPBURN trial terminate at n=13?',
+      'What is the rationale for an adaptive platform design here?',
+      'How does Hakim 2025 differ from the earlier RCTs?',
+      'What does REMAP-CAP add to the argument?',
+    ],
+  };
+</script>
+<link rel="stylesheet" href="../assets/qa-widget.css">
+<script src="../assets/qa-widget.js" defer></script>
+
+</body>
+</html>
