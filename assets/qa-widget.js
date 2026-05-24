@@ -39,7 +39,7 @@
   launcher.setAttribute('aria-label', 'Ask a question about this poster');
   launcher.innerHTML = `
     <span class="qa-icon">?</span>
-    <span>Ask Claude about this poster</span>
+    <span>Ask the poster a question</span>
   `;
   document.body.appendChild(launcher);
 
@@ -61,7 +61,7 @@
     </div>
     <div class="qa-messages" id="qa-messages"></div>
     <div class="qa-input-row">
-      <textarea class="qa-input" placeholder="Ask anything about this poster…" rows="1" maxlength="500"></textarea>
+      <textarea class="qa-input" placeholder="Ask the poster a question…" rows="1" maxlength="500"></textarea>
       <button class="qa-send">Send</button>
     </div>
     <div class="qa-disclaimer">
